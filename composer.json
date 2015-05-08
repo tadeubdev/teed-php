@@ -1,0 +1,19 @@
+{
+	"name": "tadeubarbosa/teed-php",
+	"authors":
+	[
+		{"name":"Tadeu Barbosa","email":"tadeufbarbosa@gmail.com"}
+	],
+	"autoload":
+	{
+		"psr-4":{"":"src/"},
+		"classmap":["src/Helpers/","src/Brain/","src/Traits/","src/Library/","src/Services/"],
+		"files":["src/Core/config/start.php"]
+	},
+	"require":{
+		"php":">=5.5.12",
+		"php-activerecord/php-activerecord":"dev-master",
+		"symfony/var-dumper":"3.0.*@dev"
+	}
+
+}
