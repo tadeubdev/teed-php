@@ -1,15 +1,15 @@
 
-	<div class="content" id="header">
+	@if( isset( $menu ) )
 
-		<div class="container">
+		<div class="content" id="header">
 
-			<h1> Teste </h1>
+			<div class="container">
+
+				<h1> Teste </h1>
+
+			</div>
 
 		</div>
-
-	</div>
-
-	@if( isset( $menu ) )
 
 		<div class="content sidebar" id="sidebar">
 

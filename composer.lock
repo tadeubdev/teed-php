@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "931f0be6444008220cd2d90c9b1dc249",
+    "hash": "473e4b6b415299a23c54be927572d1ee",
     "packages": [
         {
             "name": "php-activerecord/php-activerecord",
@@ -49,23 +49,22 @@
         {
             "name": "symfony/var-dumper",
             "version": "dev-master",
-            "target-dir": "Symfony/Component/VarDumper",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "aaa4996f0289392e4086a4d1bd6dacd49a214b6f"
+                "reference": "9b2a4d16f39ff8615c53ea160926c030e1fcc759"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/aaa4996f0289392e4086a4d1bd6dacd49a214b6f",
-                "reference": "aaa4996f0289392e4086a4d1bd6dacd49a214b6f",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/9b2a4d16f39ff8615c53ea160926c030e1fcc759",
+                "reference": "9b2a4d16f39ff8615c53ea160926c030e1fcc759",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "~2.7|~3.0"
+                "symfony/phpunit-bridge": "~2.8|~3.0"
             },
             "suggest": {
                 "ext-symfony_debug": ""
@@ -80,7 +79,7 @@
                 "files": [
                     "Resources/functions/dump.php"
                 ],
-                "psr-0": {
+                "psr-4": {
                     "Symfony\\Component\\VarDumper\\": ""
                 }
             },
@@ -90,34 +89,67 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony mechanism for exploring and dumping PHP variables",
-            "homepage": "http://symfony.com",
+            "homepage": "https://symfony.com",
             "keywords": [
                 "debug",
                 "dump"
             ],
-            "time": "2015-03-07 07:44:26"
+            "time": "2015-05-12 15:48:43"
+        },
+        {
+            "name": "tadeubarbosa/teed-php-frame",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tadeubarbosa/teed-php-frame.git",
+                "reference": "ff45a584c3154c58ac8a66afe2275300f8e6d148"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tadeubarbosa/teed-php-frame/zipball/ff45a584c3154c58ac8a66afe2275300f8e6d148",
+                "reference": "ff45a584c3154c58ac8a66afe2275300f8e6d148",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                },
+                "classmap": [
+                    "src/Traits/",
+                    "src/Helpers/",
+                    "src/Brain/",
+                    "src/Engine/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Tadeu Barbosa",
+                    "email": "tadeufbarbosa@gmail.com"
+                }
+            ],
+            "time": "2015-05-13 05:27:37"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "php-activerecord/php-activerecord": 20,
-        "symfony/var-dumper": 20
+        "tadeubarbosa/teed-php-frame": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "php": ">=5.5.12"
-    },
+    "platform": [],
     "platform-dev": []
 }

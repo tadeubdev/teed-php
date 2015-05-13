@@ -1,11 +1,9 @@
 <?php
 
-	namespace Controller;
-
 	class Home
 	{
 
-		use Base;
+		use Controller\Base;
 
 		public static $base = 'home';
 
@@ -16,7 +14,7 @@
 
 			self::$data['title'] = 'Home';
 
-			self::$data['menu'] = ['home'];
+			self::$data['css'] = 'welcome';
 
 			self::getView();
 

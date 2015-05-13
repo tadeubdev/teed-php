@@ -1,11 +1,9 @@
 <?php
 
-	namespace Controller;
-
 	class Error
 	{
 
-		use Base;
+		use Controller\Base;
 
 		public static $base = 'error';
 

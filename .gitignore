@@ -1,1 +1,3 @@
-vendor
+/vendor
+composer.lock
+src/Core/cache/*
