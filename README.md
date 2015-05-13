@@ -10,6 +10,7 @@ TeedPHP Framework!
 	Criação de Template para o PHP, exemplo:
 
 	.....
+	````php
 
 	@if( $user->logado() )
 
@@ -26,6 +27,7 @@ TeedPHP Framework!
 		</button>
 
 	@endif
+	````
 
 	.....
 
