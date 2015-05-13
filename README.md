@@ -9,26 +9,22 @@ TeedPHP Framework!
 
 	Criação de Template para o PHP, exemplo:
 
-	.....
-	````php
+````html
 
-	@if( $user->logado() )
+@if( $user->logado() )
 
-		Olá {{ Html::h1( $user->username ) }}!
+	Olá {{ Html::h1( $user->username ) }}!
 
-	@else
+@else
 
-		<button class="btn-warning" ng-click="OpenBoxLogin()">
+	<button class="btn-warning" ng-click="OpenBoxLogin()">
 
-			<i class="fa fa-user"></i> &nbsp;
+		<i class="fa fa-user"></i> &nbsp;
 
-			Efetue login
+		Efetue login
 
-		</button>
+	</button>
 
-	@endif
-	````
-
-	.....
-
+@endif
+````
 ------
