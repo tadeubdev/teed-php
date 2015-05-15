@@ -78,7 +78,7 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
 
     <h2> O perfil {{ Html::strong($profile) }} não foi encontrado </h2>
 
-    <a href="@link('/')" ng-click="ConfigThisProfile()">
+    <a href="/">
 
         <i class="fa fa-home"></i> &nbsp;
 
