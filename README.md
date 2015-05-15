@@ -15,21 +15,39 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
 
 - Criação de Template para o PHP, exemplo:
 
+    ````php
+    static function getProfile( $id )
+    {
+        $profile = UserService::find($id);
+
+        if( !count( $profile ) ):
+
+            self::$data['title'] = "Profile not found";
+
+            self::getView('profile-not-found');
+
+        else:
+
+            self::$data['title'] = "{$user->name}'s Profile";
+
+            $user = String::getData( $user );
+
+            self::$data['user'] = $user;
+
+            self::getView('profile');
+
+        endif;
+    }
+    ````
+
     ````html
+    {{ Html::h1( "Olá {$user->name}!" ) }}
 
-    @if( $user->logado() )
+    <button ng-click="ConfigThisProfile()">
 
-        {{ Html::h1("Olá $user->username") }}!
+        <i class="fa fa-cog"></i> &nbsp;
 
-    @else
+        Configurar perfil
 
-        <button class="btn-warning" ng-click="OpenBoxLogin()">
-
-            <i class="fa fa-user"></i> &nbsp;
-
-            Efetue login
-
-        </button>
-
-    @endif
+    </button>
     ````
