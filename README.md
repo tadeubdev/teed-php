@@ -19,7 +19,7 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
 
     @if( $user->logado() )
 
-        Olá {{ Html::h1( $user->username ) }}!
+        {{ Html::h1("Olá $user->username") }}!
 
     @else
 
