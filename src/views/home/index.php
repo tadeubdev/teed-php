@@ -1,6 +1,4 @@
 
-	<h1> Olá! </h1>
-
 	<h2> Você chegou! </h2>
 
 	<h3> TeedPHP Framework </h3>
