@@ -16,6 +16,21 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
 - Criação de Template para o PHP, exemplo:
 
     ````php
+    // src/routes.php
+    Route::group('profile', 'Profile',
+    [
+
+        ['/:user', 'getProfile', 'profile'],
+
+        ['/profile-not-found', 'getProfileNotFound', 'profile-not-found']
+
+    ]);
+    ````
+
+    ````php
+    // src/controller/Profile.php
+    static $base = 'profile';
+
     static function getProfile( $id )
     {
         $profile = UserService::find($id);
@@ -24,7 +39,9 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
 
             self::$data['title'] = "Profile not found";
 
-            self::getView('profile-not-found');
+            self::$data['profile'] = $id;
+
+            self::getView('not-found');
 
         else:
 
@@ -34,13 +51,15 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
 
             self::$data['user'] = $user;
 
-            self::getView('profile');
+            self::getView();
 
         endif;
     }
     ````
 
     ````html
+    // src/views/profile/index.php
+
     {{ Html::h1( "Olá {$user->name}!" ) }}
 
     <button ng-click="ConfigThisProfile()">
@@ -50,4 +69,20 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
         Configurar perfil
 
     </button>
+    ````
+
+    ````html
+    // src/views/profile/not-found.php
+
+    <h1> OPS! </h1>
+
+    <h2> O perfil {{ Html::strong($profile) }} não foi encontrado </h2>
+
+    <a href="@link('/')" ng-click="ConfigThisProfile()">
+
+        <i class="fa fa-home"></i> &nbsp;
+
+        home
+
+    </a>
     ````
