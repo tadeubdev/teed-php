@@ -18,7 +18,9 @@
 
 			],
 
-			'debug' => false
+			'debug' => false,
+
+			'compress_output' => true,
 
 		],
 
@@ -38,7 +40,9 @@
 
 			],
 
-			'debug' => true
+			'debug' => true,
+
+			'compress_output' => false,
 
 		],
 

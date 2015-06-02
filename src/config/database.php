@@ -8,7 +8,9 @@
 
 		if( preg_match("/{$match}/", $_SERVER['HTTP_HOST']) ):
 
-			App::setEnv( $name );
+			$value['name'] = $name;
+
+			App::setEnv( $value );
 
 			$conn[ $name ] = "mysql://{$value['database']['user']}:{$value['database']['pass']}@{$value['database']['name']}/{$value['database']['db']}";
 
@@ -28,5 +30,5 @@
 
 	ActiveRecord\Config::initialize(function($cfg)
 	{
-		$cfg->set_default_connection( App::getEnv() );
+		$cfg->set_default_connection( App::getEnv()['name'] );
 	});
