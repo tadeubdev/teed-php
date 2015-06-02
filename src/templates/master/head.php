@@ -1,7 +1,7 @@
 
 	<meta charset="utf-8">
 
-	<title> {{ $title }} - Teste </title>
+	<title> {{ $title }} - {{ Site::getTitle() }} </title>
 
 	<meta http-equiv="content-language" content="pt-br">
 
