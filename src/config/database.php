@@ -1,9 +1,5 @@
 <?php
 
-	$cfg = ActiveRecord\Config::instance();
-
-	$cfg->set_model_directory('src/service/');
-
 	$conn = [];
 
 	foreach( Files::getData('src/data/enviroment.php',true) as $name => $value ):
@@ -21,6 +17,12 @@
 		endif;
 
 	endforeach;
+
+	//
+
+	$cfg = ActiveRecord\Config::instance();
+
+	$cfg->set_model_directory('src/service/');
 
 	$cfg->set_connections( $conn );
 

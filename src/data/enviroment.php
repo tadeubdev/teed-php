@@ -2,9 +2,29 @@
 
 	return [
 
+		'production' => [
+
+			'match' => 'teedphp.com.br',
+
+			'database' => [
+
+				'name' => '123.45.67',
+
+				'user' => 'TeedPhp',
+
+				'pass' => '123456',
+
+				'db' => 'teed_php'
+
+			],
+
+			'debug' => false
+
+		],
+
 		'local' => [
 
-			'match' => '*.dev',
+			'match' => '*',
 
 			'database' => [
 
@@ -14,12 +34,12 @@
 
 				'pass' => '',
 
-				'db' => ''
+				'db' => 'teed_php'
 
 			],
 
-			'debug' => false
+			'debug' => true
 
-		]
+		],
 
 	];
