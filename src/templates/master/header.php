@@ -1,25 +1,17 @@
 
+	<div class="content sidebar" id="sidebar">
+
+		<div class="container">
+
+			<a href="@link('')" sidebar-link="home"> home </a>
+
+			<a href="@link('about')" sidebar-link="about"> sobre </a>
+
+		</div>
+
+	</div>
+
 	@if( isset( $menu ) )
-
-		<div class="content" id="header">
-
-			<div class="container">
-
-				<h1> Teste </h1>
-
-			</div>
-
-		</div>
-
-		<div class="content sidebar" id="sidebar">
-
-			<div class="container">
-
-				<a href="@link('')"> home </a>
-
-			</div>
-
-		</div>
 
 		<div class="content sidebar" id="sidebar-bread">
 

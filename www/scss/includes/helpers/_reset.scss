@@ -11,11 +11,55 @@
 	{
 		color: #333;
 		outline: none;
-		font-family: Montserrat, Geneva, Tahoma, Verdana, sans-serif;
+		font-family: Arial, Tahoma, Verdana, sans-serif;
 
 		@include box-sizing(border-box);
 
 		&:after, &:before { box-sizing: border-box; }
+	}
+
+	table
+	{
+		width: 100%;
+		margin: 30px auto;
+		font-size: 12px;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		border-spacing: 0px;
+
+		@media screen
+		{
+
+			th
+			{
+				cursor: pointer;
+				background: #EEEDDD;
+				color: #333;
+
+				i { float:right; }
+			}
+
+			tr:nth-child(odd) td { background:rgba(black,.03); }
+
+			tr:nth-child(odd):hover td { background:rgba(0,0,0,.1); }
+
+			tr:hover td { background:rgba(0,0,0,.07); }
+		}
+
+		td, th
+		{
+			padding:.7em;
+			border: solid #DDD;
+			border-width: 0 1px 1px 0;
+			text-align: left;
+		}
+
+		th:last-child { border-right:none; }
+
+		tr:last-child td { border-bottom:none; }
+
+		td:last-child { border-right:none; }
+
 	}
 
 	a
@@ -55,6 +99,34 @@
 		border-bottom: 1px dotted #CCC;
 	}
 
+	code
+	{
+		padding: 4px;
+		background: #EEE;
+		border-radius: 2px;
+		font-size: 90%;
+		font-family: sans-serif;
+		color: #333 !important;
+	}
+
+	blockquote
+	{
+		margin: 20px;
+		margin-left: 40px;
+		padding: 10px 20px;
+		border-left: 2px solid #CCC;
+		color: #888;
+		font-style: italic;
+
+		h1, h2, h3, h4, h5
+		{
+			margin-top: 0;
+			font-style: italic;
+			font-weight: normal;
+			color: #777;
+		}
+	}
+
 	.mobile-padding
 	{
 
@@ -75,77 +147,6 @@
 
 	.text { font-family:tahoma; }
 
-	.background
-	{
-		position: relative;
-
-		background-color: #888;
-		background-position: center;
-		background-size: cover;
-
-		&> div
-		{
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			padding: 1em;
-			padding-top: 3em;
-			@include background-image( linear-gradient( to bottom, transparent, #000 90% ) );
-			font-size: 17px;
-			text-transform: uppercase;
-			color: #FFF;
-			color: rgba( #FFF, .8 );
-
-			small
-			{
-				display: block;
-				color: #DDD;
-				color: rgba( #FFF, .5 );
-			}
-		}
-	}
-
-	.image-search
-	{
-		position: relative;
-
-		&:hover
-		{
-
-			&:after
-			{
-				width: 100%;
-				height: 100%;
-				display: block;
-				content: ' ';
-				background: #000;
-				background-color: rgba( black, .3 );
-				@include box-shadow( inset 0 0 200px #000 );
-
-				@include mobile { display:none; };
-				@include tablet { display:none; };
-			}
-
-			&:before
-			{
-				width: 100%;
-				height: 12%;
-				display: block;
-				position: absolute;
-				top:0; bottom:0;
-				margin: auto;
-				font-size: 3em;
-				text-align: center;
-				content: "\f002";
-				font-family: FontAwesome;
-				color: #FFF;
-
-				@include mobile { display:none; };
-				@include tablet { display:none; };
-			}
-		}
-	}
-
 	.clearfix:after
 	{
 		content: ' ';
@@ -158,14 +159,62 @@
 
 	/****/
 
+	legend
+	{
+		width: 100%;
+		margin: 0;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #DDD;
+		font-weight: bold;
+	}
+
 	input
 	{
 		border: 1px solid #CCC;
 		border-radius: 3px;
 		padding: 9px;
+
+		&[type="date"].input-small
+		{
+			font-size:10.5px !important;
+		}
+
+
+		&[type="file"]
+		{
+			padding: 7.2px !important;
+		}
+
+		&.input-small
+		{
+			padding: .5em;
+			font-size: 12px;
+		}
 	}
 
-	button, .btn
+	select
+	{
+		width: 100%;
+		border: 1px solid #CCC;
+		border-radius: 3px;
+		padding: 9px;
+
+		&.select-small
+		{
+			padding: .5em;
+			font-size: 11px;
+		}
+	}
+
+	label
+	{
+		display: block;
+		margin-bottom: 3px;
+		font-size: 11px;
+	}
+
+	.btn
 	{
 		padding: 10px 15px;
 		display: inline-block;
@@ -182,7 +231,7 @@
 			&:hover { color:#FFF; }
 		}
 
-		@include button( #555 );
+		@include button( #777 );
 
 		&.btn-small
 		{
@@ -205,6 +254,54 @@
 		&.btn-info { @include button( #25729a ); }
 	}
 
+	@media print
+	{
+		#header, #sidebar, #sidebar-bread, .screen { display:none; }
+	}
+
+	@media screen
+	{
+		.print { display:none; }
+	}
+
+	.form
+	{
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		padding: 1em;
+	}
+
+	.form-group
+	{
+		float: left;
+		padding: .1em .3em;
+	}
+
+	.input-group
+	{
+		padding: 0 .5em;
+		margin-bottom: 1em;
+
+		h1, h2, h3, h4, h5, legend
+		{
+			margin: 0;
+			margin-bottom: 5px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid #DDD;
+		}
+
+		input
+		{
+			width: 100%;
+		}
+
+		button, .btn
+		{
+			margin: 0;
+			margin-right: 5px !important;
+		}
+	}
+
 	/****/
 
 	.collum
@@ -222,26 +319,74 @@
 
 	$collum: 100% / 12 ;
 
-	.collum-1 { @extend .collum; width: $collum - .2; }
+	@for $int from 1 through 12
+	{
+		.collum-#{$int} { @extend .collum; width: $collum * $int - .2; }
+	}
 
-	.collum-2 { @extend .collum; width: $collum * 2 - .2; }
+	/******/
 
-	.collum-3 { @extend .collum; width: $collum * 3 - .2; }
+	.panel
+	{
+		padding: 20px;
+		margin: 20px 0;
+		border: 1px dotted #DDD;
+		color: #555;
+		font-size: 14px;
 
-	.collum-4 { @extend .collum; width: $collum * 4 - .2; }
+		h1, h2, h3, h4, h5, legend
+		{
+			width: 100%;
+			margin: 0;
+			margin-bottom: 10px;
+			padding-bottom: 5px;
+			border-bottom: 1px dotted #DDD;
+			color: #555;
+		}
 
-	.collum-5 { @extend .collum; width: $collum * 5 - .2; }
+		a
+		{
+			font-weight: bold;
+			font-style: italic;
+		}
 
-	.collum-6 { @extend .collum; width: $collum * 6 - .2; }
+		i { color:#555; }
 
-	.collum-7 { @extend .collum; width: $collum * 7 - .2; }
+		&.panel-small
+		{
+			padding: 10px;
+			margin: 5px 0;
+			font-size: 12px;
+		}
 
-	.collum-8 { @extend .collum; width: $collum * 8 - .2; }
+		&.panel-big
+		{
+			padding: 30px;
+			margin: 15px 0;
+			font-size: 16px;
+		}
 
-	.collum-9 { @extend .collum; width: $collum * 9 - .2; }
+		$colors:  $success  $danger  $warning  $info  $primary;
 
-	.collum-10 { @extend .collum; width: $collum * 10 - .2; }
+		$list:   'success' 'danger' 'warning' 'info' 'primary';
 
-	.collum-11 { @extend .collum; width: $collum * 11 - .2; }
+		@each $name in $list
+		{
 
-	.collum-12 { @extend .collum; width: $collum * 12 - .2; }
+			$i: index( $list, $name );
+
+			&.panel-#{$name}
+			{
+				border: 1px dotted darken( nth($colors, $i), 10% ) !important;
+
+				&, * { color:darken( nth($colors, $i), 30% ) !important; }
+
+				strong, legend, h1, h2, h3, h4, h5, i
+				{
+					color: darken( nth($colors, $i), 20% ) !important;
+					border-color: darken( nth($colors, $i), 20% ) !important;
+				}
+			}
+		}
+
+	}

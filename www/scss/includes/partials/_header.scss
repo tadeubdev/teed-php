@@ -19,8 +19,6 @@
 	#sidebar
 	{
 		padding: 1em 0;
-		z-index: 9;
-		background: $background;
 
 		&.float
 		{
@@ -31,25 +29,36 @@
 
 		a
 		{
-			margin-right: 15px;
-			color: lighten( $background, 40% );
+			margin-right: 5px;
+			padding: 8px 10px;
+			border-bottom: 2px solid #DDD;
+			font-size: 14px;
+			color: $background;
 
-			&:hover { color:#FFF; }
+			&.selected,
+			&:hover
+			{
+				border-color: $color;
+				color: lighten($color,30%);
+			}
 		}
 	}
 
 	#sidebar-bread
 	{
 		padding: .6em 0;
-		background: #333;
+
+		a, span
+		{
+			font-size: 13px;
+		}
 
 		a
 		{
 			display: inline-block;
-			font-size: 13px;
-			color: #CCC;
+			color: #333;
 
-			&:hover { color:#FFF; }
+			&:hover { color:lighten($color,30%); }
 
 			&:after
 			{
@@ -58,5 +67,5 @@
 			}
 		}
 
-		span { color: #FFF !important; }
+		span { color: #999 !important; }
 	}

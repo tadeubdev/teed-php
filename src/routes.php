@@ -18,3 +18,10 @@
 		['/', 'getHome', 'home']
 
 	]);
+
+	Route::group( 'about', 'About',
+	[
+
+		['/', 'getHome', 'about']
+
+	]);

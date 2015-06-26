@@ -5,7 +5,7 @@
 		@includePartial('head')
 
 	</head>
-	<body ng-app="app" ng-controller="AllController">
+	<body ng-app="app" ng-controller="AllController" ng-init="base='{{ $base }}'">
 
 		@includePartial('header')
 

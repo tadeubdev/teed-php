@@ -2,6 +2,8 @@
 
 	return [
 
-		'title' => 'TeedPHP'
+		'title' => 'TeedPHP',
+
+		'version' => '0.1'
 
 	];

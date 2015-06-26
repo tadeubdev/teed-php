@@ -20,4 +20,15 @@
 
 		}
 
+		public static function getAbout()
+		{
+
+			self::$data['title'] = 'Sobre';
+
+			self::$data['menu'] = [['','Home'],'Sobre'];
+
+			self::getView('about');
+
+		}
+
 	}
