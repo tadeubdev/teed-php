@@ -82,35 +82,3 @@
 		É de suma importância frizar que todos os <small><code>pull request</code></small> eviados serão avaliados e sendo esse de certa importância para o projeto será inserido.
 
 	</p>
-
-	<legend> Exemplos </legend>
-
-	<p>
-
-		<em> <strong>Exemplo 01:</strong> Criando uma página de contatos: </em>
-
-	</p>
-
-	<p>
-
-		Crie um arquivo <strong>PHP</strong> dentro da pasta <small><code>src/Controller</code></small> e salve com o nome <small><code>People.php</code></small>.
-
-		<div class="panel panel-danger panel-small">
-
-			<legend>
-
-				<i class="fa fa-exclamation-triangle"></i> &nbsp;
-
-				IMPORTANTE!
-
-			</legend>
-
-			<div>
-
-				Os nomes de arquivos, urls, tabelas etc, devem ser escritas <strong>PREFERENCIALMENTE</strong> em inglês.
-
-			</div>
-
-		</div>
-
-	</p>

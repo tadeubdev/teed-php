@@ -16,18 +16,9 @@
 
 			self::$data['css'] = 'welcome';
 
+			self::$data['notMenu'] = true;
+
 			self::getView();
-
-		}
-
-		public static function getAbout()
-		{
-
-			self::$data['title'] = 'Sobre';
-
-			self::$data['menu'] = [['','Home'],'Sobre'];
-
-			self::getView('about');
 
 		}
 

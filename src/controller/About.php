@@ -14,8 +14,6 @@
 
 			self::$data['title'] = 'Sobre';
 
-			self::$data['menu'] = ['Sobre'];
-
 			self::getView();
 
 		}
