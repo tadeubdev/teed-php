@@ -6,6 +6,6 @@
 
 	else:
 
-		require_once 'src/views/error/error-composer.php';
+		require_once 'src/views/error/error-composer.teed.php';
 
 	endif;
