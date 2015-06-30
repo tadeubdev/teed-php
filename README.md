@@ -1,15 +1,26 @@
-# teed-php
-TeedPHP Framework!
+<h1> TeedPHP Framework! </h1>
 
-----
+<h2> IMPORTANTE </h2>
 
-#### IMPORTANTE
+<p>
+    O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/) para facilitar a inclusão de bibliotecas de terceiros e até mesmo o [TeedPHP Framework](https://github.com/tadeubarbosa/teed-php-frame) (que é o responsável por fazer tudo isso funcionar), antes de qualquer coisa vá até o site e faça o download do composer.
 
-O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/) para facilitar a inclusão de bibliotecas de terceiros e até mesmo o [TeedPHP Framework](https://github.com/tadeubarbosa/teed-php-frame) (que é o responsável por fazer tudo isso funcionar), então antes de qualquer coisa vá até o site e instale o composer. Depois rode no `cmd`: composer install e o composer instalará as dependências.
+    Após instalar o `composer`, você estará pronto para instalar o TEEDPHP:
 
-----
+    > $ git clone https://github.com/tadeubarbosa/teed-php
 
-#### Framework
+    > $ composer install
+</p>
+
+<hr>
+
+<p align="center">
+  <img src="www/images/8234237489023844903.jpg?raw=true" />
+</p>
+
+<hr>
+
+<h2> Framework </h2>
 
 - Facilita a criação de arquivos PHP, HTML, SCSS, AngularJs.
 
@@ -29,46 +40,44 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
 
     ````php
     // src/controller/Profile.php
-    static $base = 'profile';
 
     static function getProfile( $id )
     {
         $profile = UserService::find($id);
 
-        if( !count( $profile ) ):
+        $profile = String::getData( $profile );
 
-            self::$data['title'] = "Profile not found";
+        if( !$profile ) return self::getProfileNotFound( $id );
 
-            self::$data['profile'] = $id;
+        self::$data['title'] = "{$user->name}'s Profile";
 
-            self::getView('not-found');
+        $user = String::getData( $user );
 
-        else:
+        self::$data['user'] = $user;
 
-            self::$data['title'] = "{$user->name}'s Profile";
+        self::getView();
+    }
 
-            $user = String::getData( $user );
+    static function getProfileNotFound( $id )
+    {
+        self::$data['title'] = "Profile not found";
 
-            self::$data['user'] = $user;
+        self::$data['profile'] = $id;
 
-            self::getView();
-
-        endif;
+        self::getView('not-found');
     }
     ````
 
     ````html
     // src/views/profile/index.php
 
+    <a href="@link("users/{$user->slug}/message")"> mensagens </a>
+
+    <a href="@link("users/{$user->slug}/friends")"> amigos </a>
+
+    <hr>
+
     {{ Html::h1( "Olá {$user->name}!" ) }}
-
-    <button ng-click="ConfigThisProfile()">
-
-        <i class="fa fa-cog"></i> &nbsp;
-
-        Configurar perfil
-
-    </button>
     ````
 
     ````html
@@ -78,11 +87,5 @@ O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/
 
     <h2> O perfil {{ Html::strong($profile) }} não foi encontrado </h2>
 
-    <a href="/">
-
-        <i class="fa fa-home"></i> &nbsp;
-
-        home
-
-    </a>
+    <a href="@base()"> home  </a>
     ````
