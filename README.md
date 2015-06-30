@@ -83,5 +83,5 @@ static function getProfileNotFound( $id )
 
 <h2> O perfil {{ Html::strong($profile) }} não foi encontrado </h2>
 
-<a href="@base()"> home  </a>
+<a href="@base()"> ir para a home  </a>
 ````
