@@ -29,9 +29,7 @@ Após instalar o `composer`, você estará pronto para instalar o TEEDPHP:
 Route::group('profile', 'Profile',
 [
 
-    ['/:user', 'getProfile', 'profile'],
-
-    ['/profile-not-found', 'getProfileNotFound', 'profile-not-found']
+    ['/:user', 'getProfile', 'profile']
 
 ]);
 ````
