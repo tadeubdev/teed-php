@@ -5,10 +5,6 @@
 
 		use Controller\Base;
 
-		public static $base = 'home';
-
-		//
-
 		public static function getHome()
 		{
 

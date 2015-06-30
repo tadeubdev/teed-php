@@ -3,16 +3,27 @@
 
 	body
 	{
-		padding-top: 20%;
-		background: #348AEB;
+		padding-top: 40px;
+		background: #EEE;
 		text-align: center;
-		color: #FFF;
+		color: #333;
+	}
+
+	#logo
+	{
+		width: 400px;
+		height: 200px;
+		margin: 20px auto;
+		background-image: url('../../images/logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 
 	h2
 	{
 		margin: 0;
-		font-size: 50px;
+		font-size: 40px;
 		text-transform: uppercase;
 		color: rgba( black, .4 );
 	}

@@ -2,12 +2,12 @@
 <html>
 	<head>
 
-		@includePartial('head')
+		@includePartial('master.head')
 
 	</head>
 	<body ng-app="app" ng-controller="AllController" ng-init="base='{{ $base }}'">
 
-		@includePartial('header')
+		@includePartial('master.header')
 
 		<div class="content" id="body">
 
@@ -19,7 +19,7 @@
 
 		</div>
 
-		@includePartial('footer')
+		@includePartial('master.footer')
 
 	</body>
 </html>

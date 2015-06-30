@@ -4,15 +4,15 @@
 
 	foreach( Files::getData('src/data/enviroment.php',true) as $name => $value ):
 
-		$match = str_replace('*','(.*)',$value['match']);
+		$match = str_replace('*','(.*)',$value->match);
 
 		if( preg_match("/{$match}/", $_SERVER['HTTP_HOST']) ):
 
-			$value['name'] = $name;
+			$value->name = $name;
 
 			App::setEnv( $value );
 
-			$conn[ $name ] = "mysql://{$value['database']['user']}:{$value['database']['pass']}@{$value['database']['name']}/{$value['database']['db']}";
+			$conn[ $name ] = "mysql://{$value->database['user']}:{$value->database['pass']}@{$value->database['name']}/{$value->database['db']}";
 
 			break;
 
@@ -30,5 +30,5 @@
 
 	ActiveRecord\Config::initialize(function($cfg)
 	{
-		$cfg->set_default_connection( App::getEnv()['name'] );
+		$cfg->set_default_connection( App::getEnv()->name );
 	});

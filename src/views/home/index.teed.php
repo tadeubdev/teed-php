@@ -1,7 +1,13 @@
 
-	<h2> Você chegou! </h2>
+	<div id="logo"></div>
 
-	<h3> TeedPHP Framework </h3>
+	<div>
+
+		<h2> Você chegou! </h2>
+
+		<h3> TeedPHP Framework </h3>
+
+	</div>
 
 	<div>
 
@@ -13,7 +19,7 @@
 
 		</a>
 
-		<a href="@link('about')" class="btn btn-danger btn-small">
+		<a href="@link('about')" class="btn btn-small">
 
 			<i class="fa fa-info-circle"></i> &nbsp;
 
@@ -21,7 +27,7 @@
 
 		</a>
 
-		<a href="http://facebook.com/tadeubarbosa-developer" target="_blank" class="btn btn-info btn-small">
+		<a href="http://facebook.com/tadeubarbosa-developer" target="_blank" class="btn btn-small">
 
 			<i class="fa fa-facebook-official"></i> &nbsp;
 
