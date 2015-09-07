@@ -12,12 +12,6 @@ Após instalar o `composer`, você estará pronto para instalar o TEEDPHP:
 
 <hr>
 
-<p align="center">
-  <img src="www/images/8234237489023844903.jpg?raw=true" />
-</p>
-
-<hr>
-
 <h2> Framework </h2>
 
 - Facilita a criação de arquivos PHP, HTML, SCSS, AngularJs.
