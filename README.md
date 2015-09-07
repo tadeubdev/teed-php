@@ -26,41 +26,44 @@ Após instalar o `composer`, você estará pronto para instalar o TEEDPHP:
 
 ````php
 // src/routes.php
-Route::group('profile', 'Profile',
-[
+Route::group('profile', 'Profile', array(
 
-    ['/:user', 'getProfile', 'profile']
+    array('/:user', 'getProfile', 'profile')
 
-]);
+));
 ````
 
 ````php
 // src/controller/Profile.php
 
-static function getProfile( $id )
+public static function getProfile( $id )
 {
     $profile = UserService::find($id);
 
     $profile = String::getData( $profile );
 
-    if( !$profile ) return self::getProfileNotFound( $id );
-
-    self::$data['title'] = "{$user->name}'s Profile";
+    if( !$profile )
+    {
+      return self::getProfileNotFound( $id );
+    }
 
     $user = String::getData( $user );
 
-    self::$data['user'] = $user;
-
-    self::getView();
+    self::getView()
+    
+        ->with('title', "{$user->name}'s Profile")
+    
+        ->with('user', $user);
 }
 
-static function getProfileNotFound( $id )
+public static function getProfileNotFound( $id )
 {
-    self::$data['title'] = "Profile not found";
 
-    self::$data['profile'] = $id;
-
-    self::getView('not-found');
+    self::getView('not-found')
+    
+        ->with('title', "Profile not found")
+    
+        ->with('profile', $id);
 }
 ````
 
