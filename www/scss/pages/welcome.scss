@@ -1,0 +1,47 @@
+
+	@import 'includes/helpers/_mixins';
+
+	body
+	{
+		padding-top: 40px;
+		background: #EEE;
+		text-align: center;
+		color: #333;
+	}
+
+	#logo
+	{
+		width: 400px;
+		height: 200px;
+		margin: 20px auto;
+		background-image: url('../../images/logo.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	h2
+	{
+		margin: 0;
+		font-size: 40px;
+		text-transform: uppercase;
+		color: rgba( black, .4 );
+	}
+
+	h3
+	{
+		margin: 0;
+		font-size: 30px;
+		text-transform: uppercase;
+		color: rgba( black, .3 );
+	}
+
+	div
+	{
+		margin: 15px 0;
+
+		a
+		{
+			margin: 0 5px;
+		}
+	}

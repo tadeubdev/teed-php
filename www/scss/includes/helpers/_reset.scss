@@ -1,0 +1,392 @@
+
+	html, body
+	{
+		margin: 0;
+		padding: 0;
+	}
+
+	body { background-color:#FFF; }
+
+	*
+	{
+		color: #333;
+		outline: none;
+		font-family: Arial, Tahoma, Verdana, sans-serif;
+
+		@include box-sizing(border-box);
+
+		&:after, &:before { box-sizing: border-box; }
+	}
+
+	table
+	{
+		width: 100%;
+		margin: 30px auto;
+		font-size: 12px;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		border-spacing: 0px;
+
+		@media screen
+		{
+
+			th
+			{
+				cursor: pointer;
+				background: #EEEDDD;
+				color: #333;
+
+				i { float:right; }
+			}
+
+			tr:nth-child(odd) td { background:rgba(black,.03); }
+
+			tr:nth-child(odd):hover td { background:rgba(0,0,0,.1); }
+
+			tr:hover td { background:rgba(0,0,0,.07); }
+		}
+
+		td, th
+		{
+			padding:.7em;
+			border: solid #DDD;
+			border-width: 0 1px 1px 0;
+			text-align: left;
+		}
+
+		th:last-child { border-right:none; }
+
+		tr:last-child td { border-bottom:none; }
+
+		td:last-child { border-right:none; }
+
+	}
+
+	a
+	{
+		text-decoration: none;
+		color: $color;
+
+		&:hover { color: lighten( $color, 10% ); }
+	}
+
+	ul
+	{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li { padding: 0; }
+	}
+
+	h1,h2,h3,h4,h5
+	{
+		small
+		{
+			font-size: .7em;
+
+			&.clear { display: block; }
+		}
+	}
+
+	img { max-width: 100%; }
+
+	hr
+	{
+		border: 0;
+		display: block;
+		margin: 1em 0;
+		border-bottom: 1px dotted #CCC;
+	}
+
+	code
+	{
+		padding: 4px;
+		background: #EEE;
+		border-radius: 2px;
+		font-size: 90%;
+		font-family: sans-serif;
+		color: #333 !important;
+	}
+
+	blockquote
+	{
+		margin: 20px;
+		margin-left: 40px;
+		padding: 10px 20px;
+		border-left: 2px solid #CCC;
+		color: #888;
+		font-style: italic;
+
+		h1, h2, h3, h4, h5
+		{
+			margin-top: 0;
+			font-style: italic;
+			font-weight: normal;
+			color: #777;
+		}
+	}
+
+	.mobile-padding
+	{
+
+		@include mobile { padding:.5em 1em; }
+	}
+
+	::-webkit-input-placeholder { color: #DDD; }
+
+	:-ms-input-placeholder { color: #DDD; }
+
+	/*****/
+
+	.color { color: $color; }
+
+	.no-margin { margin: 0 !important; }
+
+	.no-padding { padding: 0 !important; }
+
+	.text { font-family:tahoma; }
+
+	.clearfix:after
+	{
+		content: ' ';
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		clear: both;
+		height: 0;
+	}
+
+	/****/
+
+	legend
+	{
+		width: 100%;
+		margin: 0;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #DDD;
+		font-weight: bold;
+	}
+
+	input
+	{
+		border: 1px solid #CCC;
+		border-radius: 3px;
+		padding: 9px;
+
+		&[type="date"].input-small
+		{
+			font-size:10.5px !important;
+		}
+
+
+		&[type="file"]
+		{
+			padding: 7.2px !important;
+		}
+
+		&.input-small
+		{
+			padding: .5em;
+			font-size: 12px;
+		}
+	}
+
+	select
+	{
+		width: 100%;
+		border: 1px solid #CCC;
+		border-radius: 3px;
+		padding: 9px;
+
+		&.select-small
+		{
+			padding: .5em;
+			font-size: 11px;
+		}
+	}
+
+	label
+	{
+		display: block;
+		margin-bottom: 3px;
+		font-size: 11px;
+	}
+
+	.btn
+	{
+		padding: 10px 15px;
+		display: inline-block;
+		cursor: pointer;
+		font-size: 12px;
+		text-decoration: none;
+
+		@include border-radius(3px);
+
+		&, *
+		{
+			color: #FFF;
+
+			&:hover { color:#FFF; }
+		}
+
+		@include button( #777 );
+
+		&.btn-small
+		{
+			padding: 5px 10px;
+			font-size: 11px;
+		}
+
+		&.btn-large
+		{
+			padding: 15px 20px;
+			font-size: 14px;
+		}
+
+		&.btn-success { @include button( #34740e ); }
+
+		&.btn-warning { @include button( #cb9b14 ); }
+
+		&.btn-danger { @include button( #A00326 ); }
+
+		&.btn-info { @include button( #25729a ); }
+	}
+
+	@media print
+	{
+		#header, #sidebar, #sidebar-bread, .screen { display:none; }
+	}
+
+	@media screen
+	{
+		.print { display:none; }
+	}
+
+	.form
+	{
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		padding: 1em;
+	}
+
+	.form-group
+	{
+		float: left;
+		padding: .1em .3em;
+	}
+
+	.input-group
+	{
+		padding: 0 .5em;
+		margin-bottom: 1em;
+
+		h1, h2, h3, h4, h5, legend
+		{
+			margin: 0;
+			margin-bottom: 5px;
+			padding-bottom: 5px;
+			border-bottom: 1px solid #DDD;
+		}
+
+		input
+		{
+			width: 100%;
+		}
+
+		button, .btn
+		{
+			margin: 0;
+			margin-right: 5px !important;
+		}
+	}
+
+	/****/
+
+	.collum
+	{
+		float: left;
+
+		@include mobile
+		{
+			width: 100% !important;
+			float: none;
+			padding: .5em 0;
+			display: block;
+		}
+	}
+
+	$collum: 100% / 12 ;
+
+	@for $int from 1 through 12
+	{
+		.collum-#{$int} { @extend .collum; width: $collum * $int - .2; }
+	}
+
+	/******/
+
+	.panel
+	{
+		padding: 20px;
+		margin: 20px 0;
+		border: 1px dotted #DDD;
+		color: #555;
+		font-size: 14px;
+
+		h1, h2, h3, h4, h5, legend
+		{
+			width: 100%;
+			margin: 0;
+			margin-bottom: 10px;
+			padding-bottom: 5px;
+			border-bottom: 1px dotted #DDD;
+			color: #555;
+		}
+
+		a
+		{
+			font-weight: bold;
+			font-style: italic;
+		}
+
+		i { color:#555; }
+
+		&.panel-small
+		{
+			padding: 10px;
+			margin: 5px 0;
+			font-size: 12px;
+		}
+
+		&.panel-big
+		{
+			padding: 30px;
+			margin: 15px 0;
+			font-size: 16px;
+		}
+
+		$colors:  $success  $danger  $warning  $info  $primary;
+
+		$list:   'success' 'danger' 'warning' 'info' 'primary';
+
+		@each $name in $list
+		{
+
+			$i: index( $list, $name );
+
+			&.panel-#{$name}
+			{
+				border: 1px dotted darken( nth($colors, $i), 10% ) !important;
+
+				&, * { color:darken( nth($colors, $i), 30% ) !important; }
+
+				strong, legend, h1, h2, h3, h4, h5, i
+				{
+					color: darken( nth($colors, $i), 20% ) !important;
+					border-color: darken( nth($colors, $i), 20% ) !important;
+				}
+			}
+		}
+
+	}
