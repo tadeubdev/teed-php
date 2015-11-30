@@ -34,6 +34,7 @@
 				->with('css', 'error')
 
 				->with('menu', ['Algo deu errado!']);
+
 		}
 
 		public static function getMethodNotFound()
@@ -46,6 +47,7 @@
 				->with('css', 'error')
 
 				->with('menu', ['Algo deu errado!']);
+
 		}
 
 	}
