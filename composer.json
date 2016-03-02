@@ -16,6 +16,8 @@
 		"psr-4":
 		{
 
+			"": "core/",
+
 			"":"src/"
 
 		},
@@ -23,11 +25,34 @@
 		"classmap":
 		[
 
+			"core/Traits/",
+
+			"core/Exception/",
+
+			"core/Helpers/",
+
+			"core/Brain/",
+
+			"core/Engine/",
+
+			"core/Controller/",
+
+			"core/Library/",
+
 			"src/library/",
 
 			"src/controller/",
 
 			"src/service/"
+
+		],
+
+		"files":
+		[
+
+			"core/Config/Start.php",
+
+			"core/Config/DataBase.php"
 
 		]
 
@@ -38,9 +63,9 @@
 
 		"php-activerecord/php-activerecord":"dev-master",
 
-		"tadeubarbosa/teed-php-frame": "dev-master",
+		"nesbot/carbon": "dev-master",
 
-		"nesbot/carbon": "dev-master"
+		"symfony/var-dumper": "^3.0@dev"
 
 	},
 

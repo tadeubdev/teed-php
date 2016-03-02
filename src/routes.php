@@ -1,27 +1,9 @@
 <?php
 
-	Route::setRule( 'id', '([0-9]+)' );
+	Route::insert('/', 'Home@getHome', 'home');
 
-	Route::setRule( 'user', '([a-z])' );
+	Route::group( 'about', 'About', array(
 
-	Route::setRule( 'name', '([a-z\-])' );
+		array('/', 'getHome', 'about')
 
-	Route::setRule( 'post', '([0-9]+)-([a-z\-])' );
-
-	Route::setRule( 'year', '([0-9]{2})' );
-
-	//
-
-	Route::group( '/', 'Home',
-	[
-
-		['/', 'getHome', 'home']
-
-	]);
-
-	Route::group( 'about', 'About',
-	[
-
-		['/', 'getHome', 'about']
-
-	]);
+	));

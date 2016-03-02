@@ -2,7 +2,7 @@
 
 <h2> IMPORTANTE </h2>
 
-O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/) para facilitar a inclusão de bibliotecas de terceiros e até mesmo o [TeedPHP Framework](https://github.com/tadeubarbosa/teed-php-frame) (que é o responsável por fazer tudo isso funcionar), antes de qualquer coisa vá até o site e faça o download do composer.
+O `TeedPHP` utiliza o gerenciador de pacotes [composer](https://getcomposer.org/) para facilitar a inclusão de bibliotecas de terceiros, antes de qualquer coisa vá até o site e faça o download do composer.
 
 Após instalar o `composer`, você estará pronto para instalar o TEEDPHP:
 
@@ -44,9 +44,9 @@ public static function getProfile( $id )
     $user = String::getData( $user );
 
     self::getView()
-    
+
         ->with('title', "{$user->name}'s Profile")
-    
+
         ->with('user', $user);
 }
 
@@ -54,9 +54,9 @@ public static function getProfileNotFound( $id )
 {
 
     self::getView('not-found')
-    
+
         ->with('title', "Profile not found")
-    
+
         ->with('profile', $id);
 }
 ````
