@@ -7,7 +7,7 @@
 
 		public static $base = 'about';
 
-		//
+		#
 
 		public static function getHome()
 		{

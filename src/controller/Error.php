@@ -7,7 +7,7 @@
 
 		public static $base = 'error';
 
-		//
+		#
 
 		public static function getFileNotFound( $pagina=null )
 		{

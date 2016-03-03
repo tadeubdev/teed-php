@@ -3,7 +3,7 @@
 
 	<div>
 
-		<a href="@link('about')" class="btn">
+		<a href="@link('about')" class="btn btn-warning">
 
 			<i class="fa fa-info-circle"></i> &nbsp;
 
@@ -11,7 +11,7 @@
 
 		</a>
 
-		<a href="https://github.com/tadeubarbosa/teed-php" target="_blank" class="btn">
+		<a href="https://github.com/tadeubarbosa/teed-php" target="_blank" class="btn btn-warning">
 
 			<i class="fa fa-github-square"></i> &nbsp;
 
@@ -19,7 +19,7 @@
 
 		</a>
 
-		<a href="http://facebook.com/tadeubarbosa-developer" target="_blank" class="btn">
+		<a href="http://facebook.com/tadeubarbosa-developer" target="_blank" class="btn btn-warning">
 
 			<i class="fa fa-facebook-official"></i> &nbsp;
 
