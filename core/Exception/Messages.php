@@ -1,16 +1,16 @@
 <?php
 
-	return [
+	return array(
 
-		"file-not-found" => [
+		"file-not-found" => array(
 
 			"O arquivo '%s' não existe!",
 
 			"Você tentou incluir um arquivo que não foi encontrado."
 
-		],
+		),
 
-		"rout-not-found" => [
+		"rout-not-found" => array(
 
 			"A URL '%s' não existe.",
 
@@ -18,6 +18,6 @@
 
 			"Verifique se digitou corretamente: <em>%s</em>"
 
-		]
+		)
 
-	];
+	);

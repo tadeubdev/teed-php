@@ -7,10 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="www/css/libs/font-awesome.min.css">
 	<link rel="shortcut icon" href="www/images/favicon.png">
 	<style>
-	body{padding-top:40px;background:#EB3D3D;color:#FFF;}
-	*{color:#FFF !important;}
-	h1,h2,h3,h4{margin:0;text-transform:uppercase;}
-	a{color:rgb(255,255,255) !important;}
+	body{ padding-top:15px; background:#eee; }
+	*{ color:#333 !important; }
+	a, a * { color:#d54 !important;  }
+	.small-text { font-size:14px;  }
 	</style>
 </head>
 <body>
@@ -19,25 +19,17 @@
 
 		<div class="container">
 
-			<header>
+			<div class="small-text" style="border-bottom:1px solid #555;margin-bottom:15px">
 
 				<a href="<?php echo App::getBase(); ?>">
 
-					PÁGINA INICIAL
+					<i class="fa fa-home"></i> &nbsp;
+
+					go to home
 
 				</a>
 
-			</header>
-
-			<div class="panel panel-big">
-
-				<h1 style="text-align:center;">
-
-					Um erro foi encontrado
-
-				</h1>
-
-				<h2 style="text-align:center;border:0;">
+				<p style="font-weight:bold;">
 
 					<i class="fa fa-warning"></i> &nbsp;
 
@@ -45,63 +37,26 @@
 
 					<i class="fa fa-warning"></i>
 
-				</h2>
+				</p>
 
-				<div class="panel">
+			</div>
 
-					<h3> <?php echo str_replace( '%s', $debug[0]['args'][1], $message[0] ); ?> </h3>
+			<div>
 
-					<?php
-
-						for( $x=1; $x<count($message); $x++ ):
-
-							$arg = isset($debug[0]['args'][$x+1])? $debug[0]['args'][$x+1]: null;
-
-							$message[$x] = str_replace( "%s", $arg, $message[$x] );
-
-							echo "<p> {$message[$x]} </p>";
-
-						endfor;
-
-					?>
-
-				</div>
+				<div style="font-weight:bold;"> <?php echo str_replace( '%s', $debug[0]['args'][1], $message[0] ); ?> </div>
 
 				<?php
 
-					if(count($debug)>6):
+					for( $x=1; $x<count($message); $x++ )
+					{
 
-						echo "<table>";
+						$arg = isset($debug[0]['args'][$x+1])? $debug[0]['args'][$x+1]: null;
 
-							for( $x=1; $x<count($debug)-6; $x++ ):
+						$message[$x] = str_replace( "%s", $arg, $message[$x] );
 
-								echo "<tr>",
+						echo "<div> {$message[$x]} </div>";
 
-										"<td>",
-
-											isset($debug[$x]['class'])?"{$debug[$x]['class']}::{$debug[$x]['function']}": $debug[$x]['function'],
-
-										"</td>",
-
-										"<td>",
-
-											isset($debug[$x]['file'])? $debug[$x]['file']: $debug[$x-1]['file'],
-
-										"</td>",
-
-										"<td>",
-
-											isset($debug[$x]['line'])? $debug[$x]['line']: null,
-
-										"</td>",
-
-									"</tr>";
-
-							endfor;
-
-						echo "</table>";
-
-					endif;
+					}
 
 				?>
 

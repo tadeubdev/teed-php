@@ -1,67 +1,67 @@
 <?php
 
-	return [
+	return array(
 
-		['@setContent(*)',  '{-- setcontent($2) --}' ],
+		array('@setContent(*)',  '{-- setcontent($2) --}' ),
 
-		['@endcontent',  '{-- endcontent --}' ],
+		array('@endcontent',  '{-- endcontent --}' ),
 
-		['@getContent(*)',  '{-- getContent($2) --}' ],
+		array('@getContent(*)',  '{-- getContent($2) --}' ),
 
-		['@template(*)', '{-- setTemplate($2) --}' ],
+		array('@template(*)', '{-- setTemplate($2) --}' ),
 
-		['@include(*)', '{-- includeFile($2) --}' ],
+		array('@include(*)', '{-- includeFile($2) --}' ),
 
-		['@includePartial(*)', '{-- includePartial($2) --}' ],
+		array('@includePartial(*)', '{-- includePartial($2) --}' ),
 
-		//
+		#
 
-		['@base(*)', String::php('echo App::getBase($2)') ],
+		array('@base(*)', String::php('echo App::getBase($2)') ),
 
-		['@image(*)', String::php('echo App::getImageDir($2)') ],
+		array('@image(*)', String::php('echo Dir::getImage($2)') ),
 
-		['@script(*)', String::php('echo App::getScriptDir($2)') ],
+		array('@script(*)', String::php('echo Dir::getScript($2)') ),
 
-		['@link(*)', String::php('echo App::getBase($2)') ],
+		array('@link(*)', String::php('echo App::getBase($2)') ),
 
-		['@if*', String::php('if$2:'), true ],
+		array('@if*', String::php('if$2:'), true ),
 
-		['@elseif*', String::php('elseif$2:'), true ],
+		array('@elseif*', String::php('elseif$2:'), true ),
 
-		['@if(*) * )', String::php('if($2) $3 ):') ],
+		array('@if(*) * )', String::php('if($2) $3 ):') ),
 
-		['@if(*) )', String::php('if($2) ):') ],
+		array('@if(*) )', String::php('if($2) ):') ),
 
-		['@if(*)', String::php('if($2):') ],
+		array('@if(*)', String::php('if($2):') ),
 
-		['@elseif(*) )', String::php('elseif($2) ):') ],
+		array('@elseif(*) )', String::php('elseif($2) ):') ),
 
-		['@elseif(*)', String::php('elseif($2):') ],
+		array('@elseif(*)', String::php('elseif($2):') ),
 
-		['@else', String::php('else:') ],
+		array('@else', String::php('else:') ),
 
-		['@endif', String::php('endif;') ],
+		array('@endif', String::php('endif;') ),
 
-		['@foreach*', String::php('foreach$2:'), true ],
+		array('@foreach*', String::php('foreach$2:'), true ),
 
-		['@endforeach', String::php('endforeach;') ],
+		array('@endforeach', String::php('endforeach;') ),
 
-		['@for*', String::php('for$2:'), true ],
+		array('@for*', String::php('for$2:'), true ),
 
-		['@endfor', String::php('endfor;') ],
+		array('@endfor', String::php('endfor;') ),
 
-		['@switch*', String::php('switch$2:'), true ],
+		array('@switch*', String::php('switch$2:'), true ),
 
-		['@endswitch', String::php('endswitch;') ],
+		array('@endswitch', String::php('endswitch;') ),
 
-		['@while*', String::php('while$2:'), true ],
+		array('@while*', String::php('while$2:'), true ),
 
-		['@endwhile', String::php('endwhile;') ],
+		array('@endwhile', String::php('endwhile;') ),
 
-		['{{{ * }}}', '<?php $2; ?>' ],
+		array('{{{ * }}}', '<?php $2; ?>' ),
 
-		['{{- * -}}', ''],
+		array('{{- * -}}', ''),
 
-		['{{ * }}', String::php('echo $2;') ],
+		array('{{ * }}', String::php('echo $2;') ),
 
-	];
+	);

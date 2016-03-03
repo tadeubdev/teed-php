@@ -3,9 +3,9 @@
 	class Html
 	{
 
-		static $data = [];
+		public static $data = [];
 
-		static function __callStatic( $meth, $args )
+		public static function __callStatic( $meth, $args )
 		{
 
 			self::$data['name'] = $meth;
@@ -28,19 +28,21 @@
 
 			$attrs = '';
 
-			if( isset( self::$data['attrs'] ) && count( self::$data['attrs'] ) ):
+			if( isset( self::$data['attrs'] ) && count( self::$data['attrs'] ) )
+			{
 
 				$attrs = ' ';
 
-				foreach( self::$data['attrs'] as $key => $value ):
+				foreach( self::$data['attrs'] as $key => $value )
+				{
 
 					$attrs .= "{$key}=\"{$value}\" ";
 
-				endforeach;
+				}
 
 				$attrs = substr( $attrs, 0, strlen( $attrs ) - 1 );
 
-			endif;
+			}
 
 			$return = sprintf("<%s%s>%s</%s>", self::$data['name'], $attrs, self::$data['content'], self::$data['name']);
 

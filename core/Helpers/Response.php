@@ -3,7 +3,7 @@
 	class Response
 	{
 
-		static function json( $array )
+		public static function json( $array )
 		{
 
 			header('Content-type:text/json');
@@ -12,7 +12,7 @@
 
 		}
 
-		static function utf8($input)
+		public static function utf8($input)
 		{
 
 			if(is_string($input)):
@@ -25,7 +25,7 @@
 
 					$input[$key] = self::utf8($value);
 
-				endforeach;
+				}
 
 				unset($value);
 
@@ -37,9 +37,9 @@
 
 					$input->$key = self::utf8($var);
 
-				endforeach;
+				}
 
-			endif;
+			}
 
 			return $input;
 		}

@@ -1,30 +1,34 @@
 <?php
 
-	//////
-	/// SET DATES OPTIONS
+	##
+	# Configura as datas
 	setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 	date_default_timezone_set('America/Sao_Paulo');
 	Carbon\CarbonInterval::setLocale('pt_BR');
 
-	//////
-	/// START IPUNT
-	Input::start();
+	##
+	# Configura os dados do Input
+	Input::configureInputData();
 
-	/////
-	/// SET VARIBLES APP
-	App::setVariables();
+	##
+	# Inicia as variaveis da aplicação
+	App::startTheApplicationVariables();
 
-	/////
-	/// SET SITE DATA
-	Site::setAllData( Files::getData('website.php') );
+	##
+	# Adiciona as informações do arquivo a class `site`
+	Site::all( Files::getData('website.php') );
 
-	/////
-	/// SET ENV
-	foreach( Files::getData('enviroment.php') as $name => $value ):
+	##
+	# Busca pelo enviromet e seta-o
+	foreach( Files::getData('enviroment.php') as $name => $value )
+	{
 
 		$match = str_replace('*','(.*)',$value->match);
 
-		if( preg_match("/{$match}/", $_SERVER['HTTP_HOST']) ):
+		# Busca pelo host atual
+
+		if( preg_match("/{$match}/", $_SERVER['HTTP_HOST']) )
+		{
 
 			$value->name = $name;
 
@@ -32,14 +36,16 @@
 
 			break;
 
-		endif;
+		}
 
-	endforeach;
+	}
 
-	/////
-	/// INIT ROUTE
-	require_once App::getTeedDir('Routers/configurations.php');
+	##
 
-	require_once App::getSrcDir('routes.php');
+	# Busca pelas configuraçoes das Rotas: id, name etc
+	require_once Dir::getCore('Routers/configurations.php');
 
-	App::initTemplateRouting();
+	# Busca pelas rotas setadas pelo programador
+	require_once Dir::getSrc('routes.php');
+
+	App::confTemplateRoutes();

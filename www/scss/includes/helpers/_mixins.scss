@@ -19,26 +19,18 @@
 		@media only screen and (min-width: 1200px) { @content }
 	}
 
-	@mixin button( $cor1 )
+	@mixin button( $color1 )
 	{
 
-		$cor2: lighten( $cor1, 10% );
-		$cor3: darken( $cor1, 7% );
+		$color1: lighten( $color1, 1% );
+		$color2: lighten( $color1, 5% );
+		$color3: lighten( $color1, 15% );
 
-		$cor4: darken( $cor1, 20% );
-		$cor5: lighten( $cor1, 15% );
-		$cor6: darken( $cor1, 10% );
-
-		border:1px solid $cor1;
-		background-color: $cor2;
-		@include background-image( linear-gradient(to bottom, $cor2, $cor3) );
+		background-color: $color2;
 
 		&:hover
 		{
-			border: 1px solid $cor2;
-			background-color: $cor5;
-			@include background-image( linear-gradient(to bottom, $cor5, $cor6) );
-
+			background-color: $color3;
 		}
 	}
 

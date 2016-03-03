@@ -9,28 +9,31 @@
 
 		use Functions;
 
-		static $file_name;
+		public static $file_name;
 
-		static function getBase()
+		public static function getBase()
 		{
 
-			if( !isset(self::$base) ):
+			if( !isset(self::$base) )
+			{
 
 				preg_match_all('/((?:^|[A-Z])[a-z]+)/', get_class(), $matches);
 
 				$base = \String::toSlug( implode( '-', $matches[0] ) );
 
-			else:
+			}
+			else
+			{
 
 				$base = self::$base;
 
-			endif;
+			}
 
 			return $base;
 
 		}
 
-		static function getView( $file_name='index' )
+		public static function getView( $file_name='index' )
 		{
 
 			$file_name = sprintf('%s/%s.php', self::getBase(), $file_name);
@@ -41,7 +44,7 @@
 
 		}
 
-		static function with( $meth, $args )
+		public static function with( $meth, $args )
 		{
 
 			self::$data[ $meth ] = $args;
@@ -50,7 +53,7 @@
 
 		}
 
-		static function getDefaultView( $page, $lateral=null )
+		public static function getDefaultView( $page, $lateral=null )
 		{
 
 			self::$data['menulateral'] = !$lateral? 'default': self::getBase();
@@ -61,22 +64,22 @@
 
 		}
 
-		static function returnView()
+		public static function returnView()
 		{
 
 			self::$data['base'] = self::getBase();
 
 			Engine::$data['variables'] = self::$data;
 
-			//
+			#
 
-			$file_name = App::getViewsDir( self::$file_name );
+			$file_name = \Dir::getViews( self::$file_name );
 
 			Engine::renderBody( $file_name );
 
-			///
+			#
 
-			$template = App::getTemplatesDir('template.php');
+			$template = \Dir::getTemplates('template.php');
 
 			Engine::renderTemplate( $template );
 

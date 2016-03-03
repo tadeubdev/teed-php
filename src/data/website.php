@@ -4,6 +4,6 @@
 
 		'title' => 'TeedPHP',
 
-		'version' => '0.1'
+		'version' => '2.0'
 
 	];

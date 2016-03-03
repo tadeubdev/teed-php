@@ -30,16 +30,15 @@
 		a
 		{
 			margin-right: 5px;
-			padding: 8px 10px;
-			border-bottom: 2px solid #DDD;
+			padding: 10px 15px;
+			background: $background;
 			font-size: 14px;
-			color: $background;
+			color: rgba( 0, 0, 0, .5 );
 
 			&.selected,
 			&:hover
 			{
-				border-color: $color;
-				color: lighten($color,30%);
+				background: darken( $background, 5% );
 			}
 		}
 	}

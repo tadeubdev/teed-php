@@ -5,11 +5,11 @@
 
 	<meta http-equiv="content-language" content="pt-br">
 
-	{{ Html::link()->rel('stylesheet')->href( App::getCssPagesDir("default.css") ) }}
+	{{ Html::link()->rel('stylesheet')->href( Dir::getCssPages("default.css") ) }}
 
-	{{ Html::link()->rel('stylesheet')->href( App::getCssDir("libs/font-awesome.min.css") ) }}
+	{{ Html::link()->rel('stylesheet')->href( Dir::getCss("libs/font-awesome.min.css") ) }}
 
-	{{ Html::link()->rel('shortcut icon')->href( App::getWWWDir("images/favicon.png") ) }}
+	{{ Html::link()->rel('shortcut icon')->href( Dir::getWWW("images/favicon.png") ) }}
 
 	@if( isset($css) )
 
@@ -23,7 +23,7 @@
 
 			@if( is_string($filecss) )
 
-				{{{ $filecss = App::getCssPagesDir("{$filecss}.css") }}}
+				{{{ $filecss = Dir::getCssPages("{$filecss}.css") }}}
 
 			@endif
 
@@ -45,7 +45,7 @@
 
 			@if( is_string($filejs) )
 
-				{{{ $filejs = App::getWWWDir("jscript/{$filejs}.js") }}}
+				{{{ $filejs = Dir::getWWW("jscript/{$filejs}.js") }}}
 
 			@endif
 

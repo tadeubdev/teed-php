@@ -5,55 +5,56 @@
 	trait Functions
 	{
 
-		static $data = [];
+		public static $data = [];
 
-		static function __callStatic( $meth, $args )
+		public static function __callStatic( $meth, $args )
 		{
 
 			$action = substr( $meth, 0, 3 );
 
 			$name = strtolower( substr( $meth, 3, strlen( $meth ) ) );
 
-			if( $action == 'get' ):
+			switch( $action )
+			{
+				#
 
-				if( !isset(self::$data[$name]) ):
+				case 'all':
 
-					return null;
+					if( $args )
+					{
+						self::$data = array_merge( self::$data, (array) $args[0] );
+					}
+					else
+					{
+						return self::$data;
+					}
 
-				else:
+				break;
 
-					if( isset( $args[0] ) ):
+				#
 
-						return self::$data[$name] . $args[0];
+				case 'get':
 
-					elseif( isset( $args[1] ) ):
+					if( !isset(self::$data[$name]) ) return null;
 
-						return self::$data[$name] . $args[0] . $args[1];
+					if( isset( $args[0] ) ) return self::$data[$name] . $args[0];
 
-					else:
+					if( isset( $args[1] ) ) return self::$data[$name] . $args[0] . $args[1];
 
-						return self::$data[$name];
+					return self::$data[$name];
 
-					endif;
+				break;
 
-				endif;
+				#
 
-			elseif( $action == 'set' ):
+				case 'set':
 
-				self::$data[$name] = $args[0];
+					return self::$data[$name] = $args[0];
 
-			endif;
+				break;
 
-		}
+			}
 
-		static function getAllData()
-		{
-			return self::$data;
-		}
-
-		static function setAllData( $data )
-		{
-			self::$data = array_merge( self::$data, (array) $data );
 		}
 
 	}

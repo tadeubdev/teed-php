@@ -3,27 +3,27 @@
 	class Url
 	{
 
-		static function addHttpIntoUrl( $url )
+		public static function addHttpIntoUrl( $url )
 		{
 			return preg_match( '/(http)/', $url )? $url: "http://{$url}";
 		}
 
-		static function removeHttpIntoUrl( $url )
+		public static function removeHttpIntoUrl( $url )
 		{
 			return preg_replace('/((.*):\/\/(.*))/', '', $url );
 		}
 
-		static function toLocalUrl( $url )
+		public static function toLocalUrl( $url )
 		{
 			return $url;
 		}
 
-		static function toExternalUrl( $url )
+		public static function toExternalUrl( $url )
 		{
 			return self::addHttpIntoUrl( $url );
 		}
 
-		static function redirect( $url )
+		public static function redirect( $url )
 		{
 
 			ob_start();
@@ -34,7 +34,7 @@
 
 		}
 
-		static function route()
+		public static function route()
 		{
 
 			$route = self::returnRoute( func_get_args() );
@@ -43,7 +43,7 @@
 
 		}
 
-		static function returnRoute( $data )
+		public static function returnRoute( $data )
 		{
 
 			if( !isset( Route::getRoutes()[ $data[0] ] ) ) return App::getBase();
@@ -52,17 +52,21 @@
 
 			$data = array_slice( $data, 1 );
 
-			if( !$route['rules'] ):
+			if( !$route['rules'] )
+			{
 
 				$url = $route['url'];
 
 				return App::getBase() . implode('/',$url);
 
-			else:
+			}
+			else
+			{
 
 				$url = [];
 
-				foreach( $route['rules'] as $int => $rule ):
+				foreach( $route['rules'] as $int => $rule )
+				{
 
 					if( !isset($data[$int]) ) continue;
 
@@ -70,21 +74,25 @@
 
 					$match = $route['rules'][ $int ];
 
-					if( $rule=='(.*)'):
+					if( $rule=='(.*)')
+					{
 
 						if( !preg_match("/({$match})/",$data[$int])) continue;
 
 						$url[] = $data[$int];
 
-					else:
+					}
+					else
+					{
 
 						$url[] = $data[$int];
 
-					endif;
+					}
 
-				endforeach;
+				}
 
-				if( count( $url ) ):
+				if( count( $url ) )
+				{
 
 					array_unshift( $url, $route['url'][0] );
 
@@ -92,9 +100,9 @@
 
 					return App::getBase() . $url;
 
-				endif;
+				}
 
-			endif;
+			}
 
 			return App::getBase();
 
