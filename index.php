@@ -9,6 +9,6 @@
 	else
 	{
 
-		require_once 'src/views/error/error-composer.teed.php';
+		require_once 'src/views/error/error-composer.php';
 
 	}
