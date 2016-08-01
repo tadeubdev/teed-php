@@ -1,16 +1,12 @@
+<div class="error">
 
-	<div class="error">
+	<h1> OPS! </h1>
 
-		<h1> OPS! </h1>
+	<p> A página requisitada não foi encontrada! </p>
 
-		<p> A página requisitada não foi encontrada! </p>
+	<a href="@link('')" class="btn btn-info">
+		<i class="fa fa-home"></i> &nbsp;
+		ir para home
+	</a>
 
-		<a href="@link('')" class="btn btn-info">
-
-			<i class="fa fa-home"></i> &nbsp;
-
-			ir para home
-
-		</a>
-
-	</div>
+</div>
