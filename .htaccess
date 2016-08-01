@@ -1,5 +1,7 @@
 RewriteEngine On
 
+RewriteRule (core|src|vendor)/(.*) index.php
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
