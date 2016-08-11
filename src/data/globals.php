@@ -12,7 +12,7 @@
 
 				'css' => 'www/css',
 
-				'csspages' => 'www/css/pages',
+				'teedcss' => 'www/teedcss',
 
 			],
 
