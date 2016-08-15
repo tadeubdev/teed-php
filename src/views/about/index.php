@@ -4,21 +4,23 @@
 
 	<small style="color:#999;"> Framework </small>
 
-	<small class="clear" style="margin:10px 0;font-size:18px;">
-
-		<a href="https://facebook.com/tadeubarbosa-developer" target="_blank" class="btn btn-small btn-info" style="margin-right:5px;">
-			<i class="fa fa-facebook-official"></i> &nbsp;
-			facebook
-		</a>
-
-		<a href="https://github.com/tadeubarbosa/teed-php" target="_blank" class="btn btn-small" style="margin-right:5px;">
-			<i class="fa fa-github-square"></i> &nbsp;
-			github
-		</a>
-
-	</small>
-
 </h1>
+
+<div class="clear" style="margin:10px 0;font-size:14px;">
+
+	<a href="https://facebook.com/tadeubarbosa-developer" target="_blank" class="btn btn-small btn-info" style="margin-right:5px;">
+		<i class="fa fa-facebook-official"></i> &nbsp;
+		facebook
+	</a>
+
+	<span>&nbsp;|&nbsp;&nbsp;<span>
+
+	<a href="https://github.com/tadeubarbosa/teed-php" target="_blank" class="btn btn-small" style="margin-right:5px;">
+		<i class="fa fa-github-square"></i> &nbsp;
+		github
+	</a>
+
+</div>
 
 <hr>
 
