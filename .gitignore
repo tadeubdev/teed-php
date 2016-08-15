@@ -4,3 +4,4 @@
 vendor
 src/cache/*
 composer.lock
+sftp-config.json
