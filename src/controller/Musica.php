@@ -1,11 +1,11 @@
 <?php
 
-	class About
+	class Musica
 	{
 
 		use Controller\Base;
 
-		public static $base = 'about';
+		public static $base = 'musica';
 
 		#
 
@@ -14,7 +14,7 @@
 
 			self::getView()
 
-				->with('title', 'Sobre');
+				->with('title', 'Musica');
 
 		}
 

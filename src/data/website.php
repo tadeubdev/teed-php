@@ -2,8 +2,8 @@
 
 	return [
 
-		'title' => 'TeedPHP',
+		'title' => 'Tadeu Barbosa',
 
-		'version' => '2.1'
+		'version' => '1.0'
 
 	];

@@ -1,17 +1,25 @@
 
 	@if( !isset( $notMenu ) )
 
-		<div class="content sidebar" id="sidebar">
+		<header id="menu">
 
-			<div class="container">
+			<div id="menu-center">
 
-				<a href="@link('')" sidebar-link="home"> home </a>
+				<a href="@link('')" sidebar-link="home">
 
-				<a href="@link('about')" sidebar-link="about"> sobre </a>
+					home
+
+				</a>
+
+				<a href="@link('musica')" sidebar-link="musica">
+
+					musica
+
+				</a>
 
 			</div>
 
-		</div>
+		</header>
 
 		@if( isset( $menu ) )
 

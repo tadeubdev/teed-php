@@ -1,0 +1,3 @@
+.container
+	width $Width
+	margin sum($MenuHeight 10) auto 0 auto

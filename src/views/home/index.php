@@ -1,20 +1,24 @@
-<div id="logo"></div>
 
-<div>
+	<h2> TADEU BARBOSA </h2>
 
-	<a href="@link('about')" class="btn btn-info">
-		<i class="fa fa-info-circle"></i> &nbsp;
-		sobre
+	<h4> Este é o meu website </h4>
+
+	<p> Ainda não tenho nada para exibir aqui. </p>
+
+	<a href="http://github.com/tadeubarbosa" target="_blank">
+
+		<I class="fa fa-github" aria-hidden="true"></i>
+
+		Meu GitHub
+
 	</a>
 
-	<a href="https://github.com/tadeubarbosa/teed-php" target="_blank" class="btn btn-info">
-		<i class="fa fa-github-square"></i> &nbsp;
-		/tadeubarbosa/teed-php
-	</a>
+	<span> | </span>
 
-	<a href="http://facebook.com/tadeubarbosa-developer" target="_blank" class="btn btn-info">
-		<i class="fa fa-facebook-official"></i> &nbsp;
-		/tadeubarbosa-developer
-	</a>
+	<a href="https://facebook.com/tadeubarbosa" target="_blank">
 
-</div>
+		<I class="fa fa-facebook-square" aria-hidden="true"></i>
+
+		Meu Facebook
+
+	</a>

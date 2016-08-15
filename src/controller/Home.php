@@ -5,16 +5,16 @@
 
 		use Controller\Base;
 
+		public static $base = 'home';
+
+		#
+
 		public static function getHome()
 		{
 
 			self::getView()
 
-				->with('title', 'Home')
-
-				->with('css', 'welcome')
-
-				->with('notMenu', true);
+				->with('title', 'Home');
 
 		}
 

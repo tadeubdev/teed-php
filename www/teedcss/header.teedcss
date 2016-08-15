@@ -1,0 +1,25 @@
+#menu
+	width 100%
+	position absolute
+	top 0
+	left 0
+	background $Color
+	border-bottom 2px solid rgba(0,0,0,.2)
+
+#menu-center
+	width $Width
+	margin 0 auto
+
+#menu-center a
+	display inline-block
+	min-width 50px
+	line-height $MenuHeight
+	margin-left 1px
+	padding 0 5px
+	background rgba(0, 0, 0, .08)
+	font-size 13px
+	text-align center
+	color #FFF
+
+	&:hover
+		background rgba(0,0,0,.2)

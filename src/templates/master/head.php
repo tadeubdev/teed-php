@@ -5,11 +5,11 @@
 
 	<meta http-equiv="content-language" content="pt-br">
 
-	{{ Html::link()->rel('stylesheet')->href( Dir::getCssPages("default.css") ) }}
+	{{ Html::link()->rel('stylesheet')->href( Dir::getCss("template.min.css") ) }}
 
 	{{ Html::link()->rel('stylesheet')->href( Dir::getCss("libs/font-awesome.min.css") ) }}
 
-	{{ Html::link()->rel('shortcut icon')->href( Dir::getWWW("images/favicon.png") ) }}
+	{{ Html::link()->rel('shortcut icon')->href( Dir::getWWW("images/favicon.ico") ) }}
 
 	@if( isset($css) )
 

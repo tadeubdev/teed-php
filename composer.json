@@ -1,7 +1,5 @@
 {
-
 	"name": "tadeubarbosa/teed-php",
-
 	"authors":
 	[
 		{
@@ -9,63 +7,21 @@
 			"email": "tadeufbarbosa@gmail.com"
 		}
 	],
-
 	"autoload":
 	{
-
-		"psr-4":
-		{
-
-			"": "core/"
-
-		},
-
 		"classmap":
 		[
-
-			"core/Traits/",
-
-			"core/Exception/",
-
-			"core/Helpers/",
-
-			"core/Brain/",
-
-			"core/Engine/",
-
-			"core/Controller/",
-
-			"core/Library/",
-
 			"src/library/",
-
 			"src/controller/",
-
 			"src/service/"
-
-		],
-
-		"files":
-		[
-
-			"core/Config/Start.php",
-
-			"core/Config/DataBase.php"
-
 		]
-
 	},
-
 	"require":
 	{
-
-		"php-activerecord/php-activerecord":"dev-master",
-
 		"nesbot/carbon": "dev-master",
-
-		"symfony/var-dumper": "^3.0@dev"
-
+		"symfony/var-dumper": "^3.0@dev",
+		"tadeubarbosa/teed-php-frame": "dev-master",
+		"tadeubarbosa/teed-css": "dev-master"
 	},
-
     "minimum-stability": "dev"
 }
