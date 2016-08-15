@@ -2,7 +2,7 @@
 
 	return [
 
-		'title' => 'TeedPHP',
+		'title' => 'Tadeu Barbosa',
 
 		'version' => '2.2'
 

@@ -1,32 +1,25 @@
 
-<style type="text/css">
-	body { margin-top: 200px; text-align: center; }
-	img { width: 400px;  }
-	a { margin: 10px; }
-</style>
+	<h2> TADEU BARBOSA </h2>
 
-<img src="www/images/logo.png">
+	<h4> Este é o meu website </h4>
 
-<section>
 
-	<a href="https://github.com/tadeubarbosa/teed-php" target="_blank" class="btn btn-info">
-		<i class="fa fa-github-square"></i> &nbsp;
-		/tadeubarbosa/teed-php
+	<p> Ainda não tenho nada para exibir aqui. </p>
+
+	<a href="http://github.com/tadeubarbosa" target="_blank">
+
+		<I class="fa fa-github" aria-hidden="true"></i>
+
+		Meu GitHub
+
 	</a>
 
-	<a href="https://github.com/tadeubarbosa/teed-css" target="_blank" class="btn btn-info">
-		<i class="fa fa-github-square"></i> &nbsp;
-		/tadeubarbosa/teed-css
-	</a>
+	<span> | </span>
 
-	<a href="http://facebook.com/tadeubarbosa-developer" target="_blank" class="btn btn-info">
-		<i class="fa fa-facebook-official"></i> &nbsp;
-		/tadeubarbosa-developer
-	</a>
+	<a href="https://facebook.com/tadeubarbosa" target="_blank">
 
-	<a href="@link('about')" class="btn btn-info">
-		<i class="fa fa-info-circle"></i> &nbsp;
-		sobre
-	</a>
+		<I class="fa fa-facebook-square" aria-hidden="true"></i>
 
-</section>
+		Meu Facebook
+
+	</a>

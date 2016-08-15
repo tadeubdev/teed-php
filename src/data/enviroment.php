@@ -2,43 +2,36 @@
 
 	return [
 
-		/////
-		/// USADO EM SEUS PROJETOS EM PRODUÇÃO
+		## USADO EM SEUS PROJETOS EM PRODUÇÃO
 		'production' => [
 
-			/////
-			/// ALTERAR COM O NOME DO HOST
-			'match' => 'teedphp.com.br',
+			## ALTERAR COM O NOME DO HOST
+			'match' => 'tadeubarbosa.com.br',
 
-			/////
-			/// ALTERAR COM OS DADOS DO BD
+			## ALTERAR COM OS DADOS DO BD
 			'database' => [
 
-				'name' => '123.45.67',
+				'name' => 'tadeubarbosa.com.br',
 
-				'user' => 'TeedPhp',
+				'user' => 'tadeu826',
 
-				'pass' => '123456',
+				'pass' => '7vw7CD10ke',
 
-				'db' => 'teed_php'
+				'db' => 'tadeu826_site'
 
 			],
 
-			///// COMPRESSAR O HTML
 			'compress_output' => true,
 
 		],
 
-		/////
-		/// USADO EM SEU PROJETO LOCAL
+		## USADO EM SEU PROJETO LOCAL
 		'local' => [
 
-			/////
-			/// NÃO ALTERAR
+			## NÃO ALTERAR
 			'match' => '*',
 
-			/////
-			/// PREENCHER COM OS DADOS DO BD
+			## PREENCHER COM OS DADOS DO BD
 			'database' => [
 
 				'name' => 'localhost',
@@ -47,12 +40,11 @@
 
 				'pass' => '',
 
-				'db' => 'teed_php'
+				'db' => 'tadeubarbosa'
 
 			],
 
-			///// COMPRESSAR O HTML
-			'compress_output' => true,
+			'compress_output' => false,
 
 		],
 
