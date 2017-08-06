@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/tadeubarbosa/teed-php.png?label=ready&title=Ready)](https://waffle.io/tadeubarbosa/teed-php?utm_source=badge)
 #### TEEDPHP
 
 O TEEDPHP utiliza o gerenciador de pacotes (composer - https://getcomposer.org/) para a fácfil manutenção de código e implementação de códigos de terceiros, portanto, antes de começar vá até o site do composer e faça a sua instalação.
