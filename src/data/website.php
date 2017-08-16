@@ -1,9 +1,6 @@
 <?php
 
-	return [
-
-		'title' => 'Tadeu Barbosa',
-
-		'version' => '2.2'
-
-	];
+return [
+    'title' => 'Tadeu Barbosa',
+    'version' => '2.2'
+];

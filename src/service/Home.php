@@ -1,6 +1,6 @@
 <?php
 
-	class HomeServices extends \ActiveRecord\Model
-	{
+class HomeServices extends \ActiveRecord\Model
+{
 
-	}
+}

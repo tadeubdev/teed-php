@@ -1,5 +1,4 @@
-angular.module('app.controller',[]).
+angular.module('app.controller', []).
 
-controller('AllController', function($scope)
-{
-})
+    controller('AllController', function ($scope) {
+    })

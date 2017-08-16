@@ -1,8 +1,6 @@
 <?php
 
-	class Site
-	{
-
-		use \Traits\Functions;
-
-	}
+class Site
+{
+    use \Traits\Functions;
+}

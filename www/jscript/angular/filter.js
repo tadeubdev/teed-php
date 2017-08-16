@@ -1,1 +1,1 @@
-angular.module('app.filter',[])
+angular.module('app.filter', [])

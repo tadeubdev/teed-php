@@ -1,33 +1,23 @@
 <?php
 
-	return [
+return [
 
-		'paths' => [
+    'paths' => [
 
-			'www' => [
+        'www' => [
+            'images' => 'www/images',
+            'jscript' => 'www/jscript',
+            'css' => 'www/css',
+            'teedcss' => 'www/teedcss',
+        ],
 
-				'images' => 'www/images',
+        'src' => [
+            'data' => 'src/data',
+            'views' => 'src/views',
+            'templates' => 'src/templates',
+            'cache' => 'src/cache',
+        ],
 
-				'jscript' => 'www/jscript',
+    ]
 
-				'css' => 'www/css',
-
-				'teedcss' => 'www/teedcss',
-
-			],
-
-			'src' => [
-
-				'data' => 'src/data',
-
-				'views' => 'src/views',
-
-				'templates' => 'src/templates',
-
-				'cache' => 'src/cache',
-
-			],
-
-		]
-
-	];
+];

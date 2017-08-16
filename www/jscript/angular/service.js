@@ -1,5 +1,4 @@
-angular.module('app.service',[]).
+angular.module('app.service', []).
 
-service('AllService', function()
-{
-})
+    service('AllService', function () {
+    })

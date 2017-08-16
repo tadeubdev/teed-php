@@ -22,49 +22,35 @@
 			<div class="small-text" style="border-bottom:1px solid #555;margin-bottom:15px">
 
 				<a href="<?php echo App::getBase(); ?>">
+                    <i class="fa fa-home"></i> &nbsp;
+                    go to home
+                </a>
 
-					<i class="fa fa-home"></i> &nbsp;
+                <p style="font-weight:bold;">
+                    <i class="fa fa-warning"></i> &nbsp;
+                    TEED EXCEPTION &nbsp;
+                    <i class="fa fa-warning"></i>
+                </p>
 
-					go to home
+            </div>
 
-				</a>
+            <div>
 
-				<p style="font-weight:bold;">
+                <div style="font-weight:bold;"> <?php echo str_replace( '%s', $debug[0]['args'][1], $message[0] ); ?> </div>
 
-					<i class="fa fa-warning"></i> &nbsp;
+                <?php
+                for ($x=1; $x<count($message); $x++) {
+                    $arg = isset($debug[0]['args'][$x+1])? $debug[0]['args'][$x+1]: null;
+                    $message[$x] = str_replace( "%s", $arg, $message[$x] );
+                    echo "<div> {$message[$x]} </div>";
+                }
+                ?>
 
-					TEED EXCEPTION &nbsp;
+            </div>
 
-					<i class="fa fa-warning"></i>
+        </div>
 
-				</p>
-
-			</div>
-
-			<div>
-
-				<div style="font-weight:bold;"> <?php echo str_replace( '%s', $debug[0]['args'][1], $message[0] ); ?> </div>
-
-				<?php
-
-					for( $x=1; $x<count($message); $x++ )
-					{
-
-						$arg = isset($debug[0]['args'][$x+1])? $debug[0]['args'][$x+1]: null;
-
-						$message[$x] = str_replace( "%s", $arg, $message[$x] );
-
-						echo "<div> {$message[$x]} </div>";
-
-					}
-
-				?>
-
-			</div>
-
-		</div>
-
-	</div>
+    </div>
 
 </body>
 </html>

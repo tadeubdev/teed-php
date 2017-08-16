@@ -1,55 +1,41 @@
 <?php
 
-	class Html
-	{
+class Html
+{
 
-		public static $data = [];
+    public static $data = [];
 
-		public static function __callStatic( $meth, $args )
-		{
+    public static function __callStatic($meth, $args)
+    {
+        self::$data['name'] = $meth;
+        self::$data['content'] = isset($args[0])? $args[0]: null;
+        return new static;
+    }
 
-			self::$data['name'] = $meth;
+    function __call($meth, $args)
+    {
+        self::$data['attrs'][ $meth ] = $args[0];
+        return new static;
+    }
 
-			self::$data['content'] = isset($args[0])? $args[0]: null;
+    function __toString()
+    {
+        $attrs = '';
 
-			return new static;
-		}
+        if (isset( self::$data['attrs'] ) && count( self::$data['attrs'] )) {
+            $attrs = ' ';
 
-		function __call( $meth, $args )
-		{
+            foreach (self::$data['attrs'] as $key => $value) {
+                $attrs .= "{$key}=\"{$value}\" ";
+            }
 
-			self::$data['attrs'][ $meth ] = $args[0];
+            $attrs = substr( $attrs, 0, strlen( $attrs ) - 1 );
+        }
 
-			return new static;
-		}
+        $return = sprintf("<%s%s>%s</%s>", self::$data['name'], $attrs, self::$data['content'], self::$data['name']);
 
-		function __toString()
-		{
+        self::$data = [];
 
-			$attrs = '';
-
-			if( isset( self::$data['attrs'] ) && count( self::$data['attrs'] ) )
-			{
-
-				$attrs = ' ';
-
-				foreach( self::$data['attrs'] as $key => $value )
-				{
-
-					$attrs .= "{$key}=\"{$value}\" ";
-
-				}
-
-				$attrs = substr( $attrs, 0, strlen( $attrs ) - 1 );
-
-			}
-
-			$return = sprintf("<%s%s>%s</%s>", self::$data['name'], $attrs, self::$data['content'], self::$data['name']);
-
-			self::$data = [];
-
-			return $return;
-
-		}
-
-	}
+        return $return;
+    }
+}

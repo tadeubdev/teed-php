@@ -1,15 +1,11 @@
-angular.module('app.directive',[]).
+angular.module('app.directive', []).
 
-directive('sidebarLink', function()
-{
+	directive('sidebarLink', function () {
 
-	return function( scope, elm, attrs )
-	{
+		return function (scope, elm, attrs) {
+			if (attrs['sidebarLink'] == scope.base) {
+				elm.addClass('selected');
+			}
+		};
 
-		if( attrs['sidebarLink'] == scope.base )
-		{
-			elm.addClass('selected');
-		}
-	};
-
-})
+	})

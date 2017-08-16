@@ -1,21 +1,13 @@
 <?php
 
-	class Home
-	{
+class Home
+{
+    use Controller\Base;
+    public static $base = 'home';
 
-		use Controller\Base;
-
-		public static $base = 'home';
-
-		#
-
-		public static function getHome()
-		{
-
-			self::getView()
-
-				->with('title', 'Home');
-
-		}
-
-	}
+    public static function getHome()
+    {
+        self::getView()
+            ->with('title', 'Home');
+    }
+}
