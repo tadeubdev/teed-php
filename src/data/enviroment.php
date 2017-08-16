@@ -1,51 +1,51 @@
 <?php
 
-	return [
+    return [
 
-		## USADO EM SEUS PROJETOS EM PRODUÇÃO
-		'production' => [
+        ## USADO EM SEUS PROJETOS EM PRODUÇÃO
+        'production' => [
 
-			## ALTERAR COM O NOME DO HOST
-			'match' => 'tadeubarbosa.com.br',
+            ## ALTERAR COM O NOME DO HOST
+            'match' => '##',
 
-			## ALTERAR COM OS DADOS DO BD
-			'database' => [
+            ## ALTERAR COM OS DADOS DO BD
+            'database' => [
 
-				'name' => 'tadeubarbosa.com.br',
+                'name' => '##',
 
-				'user' => 'tadeu826',
+                'user' => '#',
 
-				'pass' => '7vw7CD10ke',
+                'pass' => '#',
 
-				'db' => 'tadeu826_site'
+                'db' => '#'
 
-			],
+            ],
 
-			'compress_output' => true,
+            'compress_output' => true,
 
-		],
+        ],
 
-		## USADO EM SEU PROJETO LOCAL
-		'local' => [
+        ## USADO EM SEU PROJETO LOCAL
+        'local' => [
 
-			## NÃO ALTERAR
-			'match' => '*',
+            ## NÃO ALTERAR
+            'match' => '*',
 
-			## PREENCHER COM OS DADOS DO BD
-			'database' => [
+            ## PREENCHER COM OS DADOS DO BD
+            'database' => [
 
-				'name' => 'localhost',
+                'name' => 'localhost',
 
-				'user' => 'root',
+                'user' => 'root',
 
-				'pass' => '',
+                'pass' => '',
 
-				'db' => 'tadeubarbosa'
+                'db' => 'tadeubarbosa'
 
-			],
+            ],
 
-			'compress_output' => false,
+            'compress_output' => false,
 
-		],
+        ],
 
-	];
+    ];
