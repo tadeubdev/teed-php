@@ -1,27 +1,18 @@
 {
 	"name": "tadeubarbosa/teed-php",
-	"authors":
-	[
+	"authors": [
 		{
 			"name": "Tadeu Barbosa",
 			"email": "tadeufbarbosa@gmail.com"
 		}
 	],
-	"autoload":
-	{
-		"classmap":
-		[
+	"autoload": {
+		"classmap": [
 			"src/library/",
 			"src/controller/",
 			"src/service/"
 		]
 	},
-	"require":
-	{
-		"nesbot/carbon": "dev-master",
-		"symfony/var-dumper": "^3.0@dev",
-		"tadeubarbosa/teed-php-frame": "dev-master",
-		"tadeubarbosa/teed-css": "dev-master"
-	},
-    "minimum-stability": "dev"
+	"require": {},
+	"minimum-stability": "dev"
 }

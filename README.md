@@ -2,6 +2,3 @@
 ### teedphp
 
 Framework PHP para estudos pessoais.
-
----
-corrigindo #4
