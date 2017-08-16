@@ -7,10 +7,23 @@
 		}
 	],
 	"autoload": {
+		"psr-4": {
+			"": "core/"
+		},
 		"classmap": [
+			"core/Traits/",
+			"core/Exception/",
+			"core/Helpers/",
+			"core/Brain/",
+			"core/Engine/",
+			"core/Controller/",
+			"core/Library/",
 			"src/library/",
 			"src/controller/",
 			"src/service/"
+		],
+		"files": [
+			"core/Config/Start.php"
 		]
 	},
 	"require": {},
